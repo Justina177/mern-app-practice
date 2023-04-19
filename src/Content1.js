@@ -20,7 +20,9 @@ const Content1 = () => {
       }
   return (
     <main className='main'>
-        <p>Hello {handleNameChange()}!</p>
+        <p onDoubleClick={handleClick3}>
+            Hello {handleNameChange()}!
+        </p>
         <button onClick={handleClick}>Click Here</button>
         <button onClick={() => handleClick2('Tina')}>Click It</button>
         <button onClick={(e) => handleClick3(e)}>Click Here</button>
