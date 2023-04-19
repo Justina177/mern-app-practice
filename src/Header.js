@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({ title }) => {
     // const headerStyle = { backgroundColor:'yellow',
     // color: 'black',
     // fontWeight: '700',
@@ -18,12 +18,16 @@ const Header = () => {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
-            fontWeight: '700',
-            fontSize: '60px'
+            fontWeight: '500',
+            fontSize: '40px'
         }}>
-            Groceries List
+            <h1>{title}</h1>
     </header>
   )
+}
+
+Header.defaultProps = {
+  title: "Default Title"
 }
 
 export default Header
