@@ -12,7 +12,7 @@ const Content1 = () => {
         },
         {
             id: 2,
-            checked: false,
+            checked: true,
             item: "Five Kilo of Meat"
         },
         {
@@ -31,8 +31,15 @@ const Content1 = () => {
         const listItems = items.map((item) => item.id === id ? { ...item,
         checked: !item.checked } : item);
         setItems(listItems);
+        localStorage.setItem('shoppingList', JSON.stringify(listItems));
     }
 
+    const handleDelete = (id) => {
+        const listItems = items.filter((item) => item.id !== id);
+        setItems(listItems);
+    localStorage.setItem('shoppingList', JSON.stringify(listItems));
+}
+    
 
    
   return (
@@ -47,6 +54,7 @@ const Content1 = () => {
                     />
                     <label>{item.item}</label>
                     <FaTrashAlt 
+                    onClick={() => handleDelete(item.id)}
                     role="button" 
                     tabIndex="0"
                     />
