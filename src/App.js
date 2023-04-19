@@ -40,9 +40,6 @@ const handleDelete = (id) => {
 localStorage.setItem('shoppingList', JSON.stringify(listItems));
 }
 
-
-
-
   return (
     <div className="App">
       <Header title="Grocery List" />
@@ -50,9 +47,8 @@ localStorage.setItem('shoppingList', JSON.stringify(listItems));
       items={items}
       handleCheck={handleCheck}
       handleDelete={handleDelete}
-
       />
-      <Footer />
+      <Footer length={items.length} />
     </div>
   );
 }
