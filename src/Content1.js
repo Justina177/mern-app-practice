@@ -13,8 +13,7 @@ const Content1 = ({items, handleCheck, handleDelete}) => {
                 />  
             ) : (
                 <p style={{ marginTop: '2rem' }}>Your list is Empty.</p>
-            )}
-            {/* lesson 7 time 8.00  npm i react-icons -D  */}         
+            )}        
         </main>
     )
 }

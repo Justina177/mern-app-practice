@@ -2,6 +2,7 @@ import Content1 from './Content1';
 import Footer from './Footer';
 import Header from './Header';
 import { useState } from 'react'
+import AddItem from './AddItem';
 
 function App() {
   const [items, setItems] = useState([
@@ -43,6 +44,7 @@ localStorage.setItem('shoppingList', JSON.stringify(listItems));
   return (
     <div className="App">
       <Header title="Grocery List" />
+      <AddItem />
       <Content1 
       items={items}
       handleCheck={handleCheck}
