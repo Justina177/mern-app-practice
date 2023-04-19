@@ -6,9 +6,14 @@ const Content1 = () => {
         const int = Math.floor(Math.random() * 3);
         return names[int];
       }
+
+      const handleClick = () => {
+          console.log('Button is being Clicked')
+      }
   return (
     <main className='main'>
         <p>Hello {handleNameChange()}!</p>
+        <button onClick={handleClick}>Click Here</button>
     </main>
   )
 }
