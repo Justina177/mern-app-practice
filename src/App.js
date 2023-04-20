@@ -1,9 +1,10 @@
 import Header from './Header';
 import AddItem from './AddItem';
+import SearchItem from './SearchItem';
 import Content1 from './Content1';
 import Footer from './Footer';
-import { useState } from 'react'
-import Search from './Search';
+import { useState } from 'react';
+
 
 
 function App() {
@@ -48,14 +49,14 @@ function App() {
     return (
       <div className="App">
         <Header title="Grocery List" />
-        <Search 
-        search={search}
-        setSearch={setSearch}
-        />
         <AddItem 
           newItem={newItem}
           setNewItem={setNewItem}
           handleSubmit={handleSubmit}
+        />
+        <SearchItem 
+        search={search}
+        setSearch={setSearch}
         />
         <Content1 
         items={items}
