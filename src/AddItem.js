@@ -6,16 +6,18 @@ const AddItem = () => {
     <form className='addForm'>
         <label htmlFor='addItem'>Add Item</label>
         <input
-        autoFocus 
-        id='additem'
-        type='text'
-        placeholder='Add Item'
-        required
+            autoFocus 
+            id='additem'
+            type='text'
+            placeholder='Add Item'
+            required
         />
-        <button type='submit'
-        aria-label='add Item'
-        />
+        <button 
+            type='submit'
+            aria-label='Add Item'
+        >
             <FaPlus />
+        </button>
     </form>
   )
 }

@@ -1,8 +1,9 @@
+import Header from './Header';
+import AddItem from './AddItem';
 import Content1 from './Content1';
 import Footer from './Footer';
-import Header from './Header';
 import { useState } from 'react'
-import AddItem from './AddItem';
+
 
 function App() {
   const [items, setItems] = useState([
